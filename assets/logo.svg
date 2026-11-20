@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#E0F2FE" stop-opacity="0.90"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-40%" width="140%" height="200%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#0B1E5B" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- tile -->
+  <rect x="32" y="32" width="960" height="960" rx="224" fill="url(#tile)"/>
+  <!-- wallpaper glow seen through the glass -->
+  <circle cx="700" cy="330" r="230" fill="url(#sun)"/>
+  <circle cx="700" cy="330" r="120" fill="#FFFFFF" opacity="0.18"/>
+
+  <!-- glass pill (the dock) -->
+  <g filter="url(#shadow)">
+    <rect x="152" y="560" width="720" height="224" rx="112" fill="url(#glass)"/>
+  </g>
+  <!-- lens highlight along the top edge -->
+  <path d="M232 588 Q512 560 792 588" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- app icons -->
+  <rect x="260" y="616" width="112" height="112" rx="32" fill="#1E3A8A"/>
+  <rect x="456" y="616" width="112" height="112" rx="32" fill="#2563EB"/>
+  <rect x="652" y="616" width="112" height="112" rx="32" fill="#1E3A8A"/>
+  <!-- running indicator -->
+  <circle cx="512" cy="756" r="11" fill="#2563EB"/>
+
+  <!-- auto-hide tab chevron -->
+  <path d="M440 900 L512 848 L584 900" fill="none" stroke="#FFFFFF" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
